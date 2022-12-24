@@ -1,0 +1,459 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    list-style: none;
+    text-decoration: none;
+}
+/*menu desplegable*/
+.active {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    font-weight: bold;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+body{
+    transition: all 0.4s;
+ }
+
+body.darkmode{
+    background-color: rgb(32, 32,44);
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    border-radius: 40px;
+    background-color: rgb(11, 19, 43);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+.darkmode .navbar{
+    background-color: rgb(20, 34, 75);
+}
+
+.navbar:hover {
+    transform: translateY(5px);
+    transition: .5s;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 30px;
+}
+
+.menu-btn,
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+/*menu despleglable*/
+.navbar .nav-links ul {
+    border-radius: 10px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.navbar .nav-links ul {
+    flex-direction: row;
+    height: auto;
+}
+
+.navbar .nav-links ul li {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.navbar .nav-links ul li a {
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .nav-links ul li a:hover {
+    color: #fc036b;
+}
+
+.navbar .nav-links ul li ul a:hover {
+    color: #03FC18;
+    transform: scale(1.1);
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .nav-links .active a {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar .nav-links ul {
+    flex-direction: row;
+    height: auto;
+}
+
+.navbar .nav-links ul li {
+    position: relative;
+    display: flex;
+    flex: 1 1 100%;
+}
+
+.navbar .nav-links ul li ul {
+    background-color: rgba(11, 19, 43, 0.9);
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    display: none;
+}
+
+/*.navbar .nav-links  ul li ul:hover{
+    background-color: rgba(255, 255, 255,0.3);
+}*/
+
+.navbar .nav-links ul li ul a {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 12px 0.5px;
+    transition: .3s linear;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.navbar .nav-links ul li:hover ul {
+    display: flex;
+    transition: .5s;
+    flex-direction: column;
+}
+
+
+.menu-btn,
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.logo {
+    float: left;
+    padding: 5px 20px 0;
+}
+
+.logo img {
+    height: 80px;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+li .fac {
+    color: aqua;
+    font-size: 20px;
+    border-radius: 10px;
+    border-color: #17ec29;
+    border-style: solid;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+li .fac:hover {
+    border-color: #f0eff4;
+    color: white;
+}
+
+.navbar .nav-links  li button{
+    border-radius: 20px;
+    width: 90px;
+    height: 30px;
+    cursor: pointer;
+    background-color:black;
+    color: white;
+   }
+
+   .navbar .nav-links  li button::after{
+    content: "Modo Oscuro";
+    }
+       
+    .darkmode .nav-links li button{
+        color: black;
+        background-color: white;
+    }
+    
+    .darkmode .nav-links li button::after{
+        content: "Modo Claro";
+    }
+
+header {
+    width: 100%;
+    height: 25vh;
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 80px;
+}
+.darkmode header{
+    background-color: rgb(32, 32,44);
+}
+.header-content {
+    margin-bottom: 75px;
+    color: whitesmoke;
+    text-align: center;
+    -webkit-text-stroke: 1px black;
+}
+
+.header-content h1 {
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/*secion de la parte de la preloader*/
+.preloader{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    }
+    
+    .spiner{
+        width: 70px;
+        height: 70px;
+        border-top: 5px solid blue;
+        border-right: 5px solid transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        z-index: 100000;
+    }
+    
+    .spiner > div{
+        animation: spin 1s linear infinite;
+        box-sizing: border-box;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+    }
+    
+    @keyframes spin{
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+/* columnas */
+
+section{ 
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    width: 85%;
+    height: auto;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 10px 10px;
+   }
+
+section h1{
+    font-size: 50px;
+}
+
+.footer {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px 40px;
+    margin: 0;
+    background: #484872;
+    text-align: center;
+}
+
+.footer p {
+    color: whitesmoke;
+    margin: 20px auto;
+}
+
+@media only screen and (max-width: 600px)  {
+        header{
+        background-color: #57b9fa;
+        width: 100%;
+        height: 55vh;
+        background-image: url('/img/banner1.jpg');
+        background-position: center;
+        background-size: 100% 600px;
+        background-repeat: no-repeat;
+    
+    }
+
+    .darkmode .navbar{
+        background-color: rgba(20, 34, 75, 0.7);
+         color: white;
+     }
+ 
+.darkmode .nav-links{
+        background-color: rgba(20, 34, 75, 0.7);
+         color: white;
+    }
+
+ 
+.darkmode .nav-links ul li ul{
+        background-color: rgba(20, 34, 75, 0.7);
+         color: white;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        height: 60vh;
+        justify-content: center;
+        background-color: rgba(11, 19, 43, 0.7);
+        margin-top: -900px;
+        transition: all 0.5s ease;
+    }
+
+    .mobile-menu {
+        margin-top: 0px;
+        border-bottom-right-radius: 30%;
+    }
+
+    .nav-links li {
+        margin: 30px auto;
+    }
+
+    /*menu despleglable*/
+    .navbar .nav-links ul li a {
+        color: white;
+        padding: 6px 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .navbar .nav-links ul li a:hover {
+        color: #fc036b;
+    }
+
+    .navbar .nav-links ul li ul a:hover {
+        color: #03FC18;
+        transform: scale(1.1);
+    }
+
+    .navbar .nav-links ul {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .navbar .nav-links ul li {
+        position: relative;
+        display: flex;
+        flex: 1 1 100%;
+    }
+
+    .navbar .nav-links ul li ul {
+        background-color: rgba(11, 19, 43, 0.9);
+        margin: 5px;
+        text-align: center;
+        border-radius: 10px;
+        position: absolute;
+        top: 80%;
+        left: 0;
+        display: none;
+    }
+
+    .navbar .nav-links ul li ul a {
+        font-size: 10px;
+        font-weight: bold;
+        padding: 6px 0.5px;
+        transition: .6s linear;
+        cursor: pointer;
+    }
+
+    .navbar .nav-links ul li:hover ul {
+        display: flex;
+        transition: .5s;
+        flex-direction: column;
+    }
+
+  section .contenedor{
+    width: 100%;
+}
+
+section figure img{
+    width: 280px;
+    height: 400px;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    box-shadow: 1px 5px 5px 2px #dfeffe;
+   }
+
+.footer {
+    padding: 10px;
+}
+}
