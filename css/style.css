@@ -397,6 +397,11 @@ section div .ancla a{
     box-shadow: 0 0 10px #57b9fa, 0 0 80px #57b9fa, 0 0 120px #57b9fa;
 }
 
+#disqus_thread{
+width: 95%;
+margin: 10px auto;
+}
+
 .footer {
     width: 100%;
     min-height: 100px;
