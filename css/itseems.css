@@ -533,6 +533,11 @@ details[open] summary::before {
     margin-left: -1px;
 }
 
+#disqus_thread{
+width: 95%;
+margin: 10px auto;
+}
+
 .footer {
     width: 100%;
     min-height: 100px;
