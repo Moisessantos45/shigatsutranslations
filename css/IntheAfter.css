@@ -26,12 +26,12 @@ html {
     overflow-x: hidden;
 }
 
-body{
+body {
     transition: all 0.4s;
- }
+}
 
-body.darkmode{
-    background-color: rgb(32, 32,44);
+body.darkmode {
+    background-color: rgb(32, 32, 44);
     color: white;
 }
 
@@ -49,7 +49,7 @@ body.darkmode{
     font-size: 18px;
 }
 
-.darkmode .navbar{
+.darkmode .navbar {
     background-color: rgb(20, 34, 75);
 }
 
@@ -65,6 +65,11 @@ body.darkmode{
 
 .nav-links li {
     margin: 0 20px;
+}
+
+.nav-links li:hover{
+    transform: scale(1.1);
+    transition: .7s;
 }
 
 .menu-btn,
@@ -90,7 +95,7 @@ body.darkmode{
 .navbar .nav-links ul {
     flex-direction: row;
     height: auto;
-}
+    }
 
 .navbar .nav-links ul li {
     display: flex;
@@ -106,8 +111,8 @@ body.darkmode{
     font-weight: bold;
 }
 
-.navbar .nav-links ul li a:hover{
-  color: #fc036b;
+.navbar .nav-links ul li a:hover {
+    color: #fc036b;
 }
 
 .navbar .nav-links ul li ul a:hover {
@@ -150,12 +155,12 @@ body.darkmode{
     text-transform: uppercase;
 }
 
-.navbar .nav-links .active a{
+.navbar .nav-links .active a {
     font-weight: bold;
-    text-transform: uppercase;    
+    text-transform: uppercase;
 }
 
-.navbar .nav-links li a{
+.navbar .nav-links li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -172,22 +177,22 @@ body.darkmode{
     width: 90px;
     height: 30px;
     cursor: pointer;
-    background-color:black;
+    background-color: black;
     color: white;
 }
 
-.navbar .nav-links  li button::after{
+.navbar .nav-links li button::after {
     content: "Modo Oscuro";
-    }
-       
-    .darkmode .nav-links li button{
-        color: black;
-        background-color: white;
-    }
-    
-    .darkmode .nav-links li button::after{
-        content: "Modo Claro";
-    }
+}
+
+.darkmode .nav-links li button {
+    color: black;
+    background-color: white;
+}
+
+.darkmode .nav-links li button::after {
+    content: "Modo Claro";
+}
 
 header {
     width: 100%;
@@ -248,7 +253,7 @@ header {
 }
 
 li .fac {
-    color:aqua;
+    color: aqua;
     font-size: 20px;
     border-radius: 10px;
     border-color: #17ec29;
@@ -261,25 +266,33 @@ li .fac:hover {
     border-color: #f0eff4;
     color: white;
 }
+/*infor de nivela*/
 
-section {
-    width: 85%;
+.minfo {
+    width: 95%;
+    height: auto;
     margin: 50px auto;
-   
     display: flex;
     flex-wrap: wrap;
     gap: 0;
     justify-content: space-evenly;
-}
-
-section .title {
     text-align: center;
-    font-size: 40px;
-    color: #49497e;
 }
 
-.darkmode .title{
+.minfo div {
+    width: 95%;
+}
+
+.minfo div .title{
+    font-size: 45px;
+}
+
+.darkmode .title {
     color: white;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 }
 
 .line3 {
@@ -300,23 +313,22 @@ section .title {
     border-radius: 5px;
 }
 
-section figure {
+.minfo figure {
     padding: 10px;
     height: auto;
     width: 350px;
-    
-    display: inline-block;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     margin: 5px;
+    align-self: center;
 }
 
-figure img {
-    left: 20px;
+.minfo img {
     position: relative;
     display: flex;
     margin: 10px;
     box-shadow: 1px 5px 5px 2px #dfeffe;
-    width: 300;
+    width: 90%;
     height: 412px;
     border-radius: 20px;
 }
@@ -332,42 +344,77 @@ figure .web {
     justify-content: center;
 }
 
-figure div h4 {
-    text-align: center;
-    margin: 10px;
-}
+
 /*
 .info{
     border: 1px solid black;
 }
 */
-.info table{
+
+.info {
+    display: flex;
+    width: 90%;
+    margin: 30px auto;
+}
+
+.info table {
     width: 100%;
 
 }
 
-.info table caption{
+.info table caption {
     margin-bottom: 20px;
 }
 
-.info table tr .sinop{
+.info table tr .sinop {
     display: inline;
 }
+
 /*
 .info table,th,td{
     border: 1px solid black;
 } */
 
-.info table th{
-   width: 12%;
-   height: 40px;
-   text-align:start;
+.info table th {
+    width: 12%;
+    height: 40px;
+    text-align: start;
 }
 
 .content-col {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.personajes {
+    width: 90%;
+    height: auto;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: space-evenly;
+}
+
+.personajes .conteper {
+    padding: 10px;
+    height: auto;
+    width: 250px;    
+    display: flex;
+    margin: 5px;
+    flex-direction: column;    
+    text-align: center;
+    }
+
+.conteper img {
+   position: relative;
+   display: flex;
+   width: 60%;
+   height: 115px;
+   align-self: center;
+   outline:2px solid #fc036b;
+   border-radius: 10px;
 }
 
 .line4 {
@@ -392,14 +439,14 @@ figure div h4 {
 .image-col {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 95%;
     justify-content: center;
 }
 
 .tours .image-gallery {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 95%;
     align-items: center;
     justify-content: center;
 }
@@ -415,25 +462,54 @@ figure div h4 {
     color: #484872;
 }
 
-.darkmode h1{
+.darkmode h1 {
     color: white;
 }
 
 .content-col .line {
     margin-left: -1px;
 }
+
 /*volumenes*/
-figure .vol {
-    width: 100%;
+.volumes {
     display: flex;
     flex-wrap: wrap;
     gap: 0;
+    width: 95%;
+    margin: 40px auto;
+    justify-content: space-evenly;
+}
+
+.volumes div {
+    display: flex;
+    width: 95%;
+    text-align: center;
+    flex-direction: column;
+}
+
+.volumes figure {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.volumes figure img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 1px 5px 3px 2px #dfeffe;
+}
+
+.volumes .vol {
+    width: 100%;
+    display: flex;
     text-align: center;
     justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
 }
+
 figure a {
     width: auto;
-    display: inline-block;
     padding: 10px;
     margin-top: 10px;
     text-decoration: none;
@@ -443,8 +519,8 @@ figure a {
     transition: all 400ms ease;
     margin-bottom: 5px;
     cursor: pointer;
-    }
-
+    align-self: center;
+}
 
 .footer {
     width: 100%;
@@ -454,10 +530,13 @@ figure a {
     background: #484872;
     text-align: center;
 }
+
 .footer p {
     color: whitesmoke;
     margin: 20px auto;
 }
+
+
 
 @media only screen and (max-width: 700px) {
     .menu-btn {
@@ -469,11 +548,11 @@ figure a {
         background-color: transparent;
     }
 
-    .darkmode .navbar{
+    .darkmode .navbar {
         background-color: transparent;
-         color: white;
-     }
- 
+        color: white;
+    }
+
     .logo {
         position: absolute;
         top: 5px;
@@ -508,9 +587,9 @@ figure a {
         font-weight: bold;
     }
 
-    .navbar .nav-links ul li a:hover{
+    .navbar .nav-links ul li a:hover {
         color: #fc036b;
-      }
+    }
 
     .navbar .nav-links ul li ul a:hover {
         color: #03FC18;
@@ -559,7 +638,7 @@ figure a {
         font-weight: bold;
         height: 5px;
     }
-    
+
     header {
         width: 100%;
         height: 50vh;
@@ -568,24 +647,9 @@ figure a {
         background-size: 100% 600px;
         background-repeat: no-repeat;
         margin-top: 0px;
-        }
-
-    section {
-        width: 85%;
-       /* border: 1px solid blue;*/
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0;
-        justify-content: space-evenly;
     }
 
-    section .title {
-        text-align: center;
-        font-size: 20px;
-        color: #49497e;
-    }
-
-    .line3 {
+       .line3 {
         display: inline-block;
         width: 350px;
         height: 4px;
@@ -616,12 +680,14 @@ figure a {
         border-color: #f0eff4;
         color: white;
     }
-     /*header*/
-     .header-content{
+
+    /*header*/
+    .header-content {
         margin-bottom: 120px;
         -webkit-text-stroke: 1px #e03856;
-     }
-       .header-content h2 {
+    }
+
+    .header-content h2 {
         font-size: 20px;
         margin-top: 25px;
         padding: 5px 25px;
@@ -637,48 +703,20 @@ figure a {
         margin-bottom: 10px;
     }
 
-    .info{
-        border: none;
-    }
-    .info table,th,td{
+    .info {
         border: none;
     }
 
-    section{
+    .info table,
+    th,
+    td {
         border: none;
     }
-    section figure {
-        padding: 5px;
-        height: auto;
-        width: 300px;
-       /* border: 1px solid black;*/
-        display: inline-block;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 5px;
-    }
 
-    figure img {
-        left: 30px;
-        position: relative;
-        display: flex;
-        margin: 5px;
-        box-shadow: 1px 5px 5px 2px #dfeffe;
-      /*  width: 200;*/
-        height: 306px;
-        border-radius: 10px;
+    .personajes .conteper {
+        align-self: center;
+        font-size: 16px;
     }
-
-    figure a {
-        width: auto;
-        display: inline-block;
-        padding: 5px;
-        text-decoration: none;
-        color: white;
-        background-color: #fc036b;
-        border-radius: 20px;
-        touch-action: cross-slide-y;
-        }
 
     .line4 {
         justify-content: center;

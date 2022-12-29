@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 a{
     list-style: none;
@@ -62,7 +63,12 @@ body.darkmode{
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0 25px;
+}
+
+.nav-links li:hover{
+    transform: scale(1.1);
+    transition: .7s;
 }
 
 .menu-btn,

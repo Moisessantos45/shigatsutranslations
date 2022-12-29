@@ -66,6 +66,11 @@ body.darkmode {
     margin: 0 20px;
 }
 
+.nav-links li:hover{
+    transform: scale(1.1);
+    transition: .7s;
+}
+
 .menu-btn,
 .close-btn {
     position: absolute;
@@ -260,24 +265,27 @@ li .fac:hover {
     color: white;
 }
 
-section {
-    width: 85%;
+.minfo {
+    width: 95%;
+    height: auto;
     margin: 50px auto;
-
     display: flex;
     flex-wrap: wrap;
     gap: 0;
     justify-content: space-evenly;
+    text-align: center;
 }
 
-section .title {
-    text-align: center;
-    font-size: 40px;
-    color: #49497e;
+.minfo div {
+    width: 95%;
 }
 
 .darkmode .title {
     color: white;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 }
 
 .line3 {
@@ -298,41 +306,24 @@ section .title {
     border-radius: 5px;
 }
 
-section figure {
+.minfo figure {
     padding: 10px;
     height: auto;
     width: 350px;
-
-    display: inline-block;
-    justify-content: center;
+    flex-direction: column;
+    display: flex;
     margin: 5px;
+    align-self: center;
 }
 
-figure img {
-    left: 20px;
+.minfo img {
     position: relative;
     display: flex;
     margin: 10px;
     box-shadow: 1px 5px 5px 2px #dfeffe;
-    width: 300;
+    width: 90%;
     height: 412px;
     border-radius: 20px;
-}
-
-figure .web {
-    padding: 10px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 0;
-    text-align: center;
-    justify-content: center;
-}
-
-figure div h4 {
-    text-align: center;
-    margin: 10px;
 }
 
 /*
@@ -340,6 +331,12 @@ figure div h4 {
     border: 1px solid black;
 }
 */
+.info {
+    display: flex;
+    width: 90%;
+    margin: 30px auto;
+}
+
 .info table {
     width: 100%;
 }
@@ -388,14 +385,14 @@ figure div h4 {
 .image-col {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 95%;
     justify-content: center;
 }
 
 .tours .image-gallery {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 95%;
     align-items: center;
     justify-content: center;
 }
@@ -420,18 +417,45 @@ figure div h4 {
 }
 
 /*volumenes*/
-figure .vol {
-    width: 100%;
+.volumes {
     display: flex;
     flex-wrap: wrap;
     gap: 0;
-    text-align: center;
-    justify-content: center;
+    width: 95%;
+    margin: 40px auto;
+    justify-content: space-evenly;
 }
 
-figure a {
+.volumes div {
+    display: flex;
+    width: 95%;
+    text-align: center;
+    flex-direction: column;
+}
+
+.volumes figure {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.volumes figure .vol {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.volumes figure img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 1px 5px 3px 2px #dfeffe;
+}
+
+.volumes figure a {
     width: auto;
-    display: inline-block;
     padding: 10px;
     margin-top: 10px;
     text-decoration: none;
@@ -441,8 +465,8 @@ figure a {
     transition: all 400ms ease;
     margin-bottom: 5px;
     cursor: pointer;
+    align-self: center;
 }
-
 
 .footer {
     width: 100%;
@@ -559,21 +583,6 @@ figure a {
         height: 5px;
     }
 
-    section {
-        width: 85%;
-        /* border: 1px solid blue;*/
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0;
-        justify-content: space-evenly;
-    }
-
-    section .title {
-        text-align: center;
-        font-size: 20px;
-        color: #49497e;
-    }
-
     .line3 {
         display: inline-block;
         width: 350px;
@@ -643,43 +652,7 @@ figure a {
         border: none;
     }
 
-    section {
-        border: none;
-    }
-
-    section figure {
-        padding: 5px;
-        height: auto;
-        width: 300px;
-        /* border: 1px solid black;*/
-        display: inline-block;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 5px;
-    }
-
-    figure img {
-        left: 30px;
-        position: relative;
-        display: flex;
-        margin: 5px;
-        box-shadow: 1px 5px 5px 2px #dfeffe;
-        /*  width: 200;*/
-        height: 306px;
-        border-radius: 10px;
-    }
-
-    figure a {
-        width: auto;
-        display: inline-block;
-        padding: 5px;
-        text-decoration: none;
-        color: white;
-        background-color: #fc036b;
-        border-radius: 20px;
-        touch-action: cross-slide-y;
-    }
-
+   
     .line4 {
         justify-content: center;
         display: inline-block;
