@@ -347,19 +347,27 @@ li .fac:hover {
     margin-bottom: 20px;
 }
 
-.info table tr .sinop {
-    display: inline;
+.info table tr{
+    width: 100%;
 }
 
+.info table tr .sinop{
+    display: flex;
+    align-self:baseline;
+}
 /*
 .info table,th,td{
     border: 1px solid black;
 } */
 
-.info table th {
-    width: 12%;
-    height: 40px;
-    text-align: start;
+.info table th{
+   width: 12%;
+   height: 40px;
+   text-align:start;
+}
+
+.info table tr td{
+    width: 85%;
 }
 
 .content-col {
@@ -474,9 +482,9 @@ li .fac:hover {
 }
 
 #disqus_thread{
-width: 95%;
-margin: 10px auto;
-}
+    width: 95%;
+    margin: 10px auto;
+    }
 
 .footer {
     width: 100%;
@@ -665,6 +673,11 @@ margin-bottom: 120px;
     th,
     td {
         border: none;
+    }
+
+    .info table tr .sinop{
+        text-align: center;
+        display:revert;
     }
 
       .line4 {

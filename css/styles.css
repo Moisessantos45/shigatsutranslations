@@ -46,6 +46,7 @@ body.darkmode {
     justify-content: space-between;
     color: whitesmoke;
     font-size: 18px;
+    flex-wrap: wrap;
 }
 
 .darkmode .navbar {
@@ -193,7 +194,7 @@ header {
     height: 100vh;
     background-image: url('/img/backgruop.png');
     background-position: center;
-    background-size: 100% 600px;
+    background-size: 100% 500px;
     background-repeat: no-repeat;
     display: flex;
     align-items: flex-end;
@@ -343,24 +344,23 @@ section .title {
 }
 
 section figure {
-    padding: 10px;
     height: auto;
-    width: 350px;
+    width: 330px;
     /*  border: 1px solid black;*/
-    display: inline-block;
-    justify-content: center;
+    flex-direction: column;
     margin: 5px;
+    display: flex;
 }
 
 figure img {
-    left: 20px;
     position: relative;
     display: flex;
     margin: 10px;
     box-shadow: -5px 2px 10px 2px #988f89;
-    width: 300;
+    width: 300px;
     height: 412px;
     border-radius: 20px;
+    align-self: center;
 }
 
 .darkmode figure img{
@@ -516,11 +516,6 @@ figure a:hover {
     margin-left: -1px;
 }
 
-#disqus_thread{
-width: 95%;
-margin: 10px auto;
-}
-
 .footer {
     width: 100%;
     min-height: 100px;
@@ -650,15 +645,7 @@ margin: 10px auto;
         -webkit-text-stroke: 1px #f54768;
     }
 
-    section {
-        width: 85%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0;
-        justify-content: space-evenly;
-    }
-
-    section .title {
+     section .title {
         text-align: center;
         font-size: 20px;
         color: #49497e;
@@ -702,27 +689,6 @@ margin: 10px auto;
         background: #fc036b;
         margin: 10px auto;
         border-radius: 5px;
-    }
-
-    section figure {
-        padding: 5px;
-        height: auto;
-        width: 300px;
-        display: inline-block;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 5px;
-    }
-
-    figure img {
-        left: 30px;
-        position: relative;
-        display: flex;
-        margin: 5px;
-        box-shadow: 1px 5px 5px 2px #dfeffe;
-        width: 200;
-        height: 306px;
-        border-radius: 10px;
     }
 
     .explore {

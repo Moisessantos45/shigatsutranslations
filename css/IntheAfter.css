@@ -67,7 +67,7 @@ body.darkmode {
     margin: 0 20px;
 }
 
-.nav-links li:hover{
+.nav-links li:hover {
     transform: scale(1.1);
     transition: .7s;
 }
@@ -95,7 +95,7 @@ body.darkmode {
 .navbar .nav-links ul {
     flex-direction: row;
     height: auto;
-    }
+}
 
 .navbar .nav-links ul li {
     display: flex;
@@ -266,6 +266,7 @@ li .fac:hover {
     border-color: #f0eff4;
     color: white;
 }
+
 /*infor de nivela*/
 
 .minfo {
@@ -283,7 +284,7 @@ li .fac:hover {
     width: 95%;
 }
 
-.minfo div .title{
+.minfo div .title {
     font-size: 45px;
 }
 
@@ -353,7 +354,7 @@ figure .web {
 
 .info {
     display: flex;
-    width: 90%;
+    width: 87%;
     margin: 30px auto;
 }
 
@@ -362,12 +363,17 @@ figure .web {
 
 }
 
+.info table tr {
+    width: 100%;
+}
+
 .info table caption {
     margin-bottom: 20px;
 }
 
 .info table tr .sinop {
-    display: inline;
+    display: flex;
+    align-self: baseline;
 }
 
 /*
@@ -379,6 +385,10 @@ figure .web {
     width: 12%;
     height: 40px;
     text-align: start;
+}
+
+.info table tr td {
+    width: 85%;
 }
 
 .content-col {
@@ -400,21 +410,21 @@ figure .web {
 .personajes .conteper {
     padding: 10px;
     height: auto;
-    width: 250px;    
+    width: 250px;
     display: flex;
     margin: 5px;
-    flex-direction: column;    
+    flex-direction: column;
     text-align: center;
-    }
+}
 
 .conteper img {
-   position: relative;
-   display: flex;
-   width: 60%;
-   height: 115px;
-   align-self: center;
-   outline:2px solid #fc036b;
-   border-radius: 10px;
+    position: relative;
+    display: flex;
+    width: 60%;
+    height: 115px;
+    align-self: center;
+    outline: 2px solid #fc036b;
+    border-radius: 10px;
 }
 
 .line4 {
@@ -523,9 +533,9 @@ figure a {
 }
 
 #disqus_thread{
-width: 95%;
-margin: 10px auto;
-}
+    width: 95%;
+    margin: 10px auto;
+    }
 
 .footer {
     width: 100%;
@@ -654,7 +664,7 @@ margin: 10px auto;
         margin-top: 0px;
     }
 
-       .line3 {
+    .line3 {
         display: inline-block;
         width: 350px;
         height: 4px;
@@ -716,6 +726,11 @@ margin: 10px auto;
     th,
     td {
         border: none;
+    }
+
+    .info table tr .sinop {
+        text-align: center;
+        display: revert;
     }
 
     .personajes .conteper {

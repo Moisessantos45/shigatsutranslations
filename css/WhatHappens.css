@@ -26,12 +26,12 @@ html {
     overflow-x: hidden;
 }
 
-body{
+body {
     transition: all 0.4s;
- }
+}
 
-body.darkmode{
-    background-color: rgb(32, 32,44);
+body.darkmode {
+    background-color: rgb(32, 32, 44);
     color: white;
 }
 
@@ -49,7 +49,7 @@ body.darkmode{
     font-size: 18px;
 }
 
-.darkmode .navbar{
+.darkmode .navbar {
     background-color: rgb(20, 34, 75);
 }
 
@@ -67,7 +67,7 @@ body.darkmode{
     margin: 0 20px;
 }
 
-.nav-links li:hover{
+.nav-links li:hover {
     transform: scale(1.1);
     transition: .7s;
 }
@@ -111,8 +111,8 @@ body.darkmode{
     font-weight: bold;
 }
 
-.navbar .nav-links ul li a:hover{
-  color: #fc036b;
+.navbar .nav-links ul li a:hover {
+    color: #fc036b;
 }
 
 .navbar .nav-links ul li ul a:hover {
@@ -155,12 +155,12 @@ body.darkmode{
     text-transform: uppercase;
 }
 
-.navbar .nav-links .active a{
+.navbar .nav-links .active a {
     font-weight: bold;
-    text-transform: uppercase;    
+    text-transform: uppercase;
 }
 
-.navbar .nav-links li a{
+.navbar .nav-links li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -253,7 +253,7 @@ header {
 }
 
 li .fac {
-    color:aqua;
+    color: aqua;
     font-size: 20px;
     border-radius: 10px;
     border-color: #17ec29;
@@ -266,6 +266,7 @@ li .fac:hover {
     border-color: #f0eff4;
     color: white;
 }
+
 .minfo {
     width: 95%;
     height: auto;
@@ -334,31 +335,41 @@ li .fac:hover {
 */
 .info {
     display: flex;
-    width: 90%;
+    width: 87%;
     margin: 30px auto;
 }
 
-.info table{
+.info table {
     width: 100%;
 
 }
 
-.info table caption{
+.info table tr {
+    width: 100%;
+}
+
+.info table caption {
     margin-bottom: 20px;
 }
 
-.info table tr .sinop{
-    display: inline;
+.info table tr .sinop {
+    display: flex;
+    align-self: baseline;
 }
+
 /*
 .info table,th,td{
     border: 1px solid black;
 } */
 
-.info table th{
-   width: 12%;
-   height: 40px;
-   text-align:start;
+.info table th {
+    width: 12%;
+    height: 40px;
+    text-align: start;
+}
+
+.info table td {
+    width: 85%;
 }
 
 .content-col {
@@ -412,13 +423,14 @@ li .fac:hover {
     color: #484872;
 }
 
-.darkmode h1{
+.darkmode h1 {
     color: white;
 }
 
 .content-col .line {
     margin-left: -1px;
 }
+
 /*volumenes*/
 .volumes {
     display: flex;
@@ -472,9 +484,9 @@ li .fac:hover {
 }
 
 #disqus_thread{
-width: 95%;
-margin: 10px auto;
-}
+    width: 95%;
+    margin: 10px auto;
+    }
 
 .footer {
     width: 100%;
@@ -484,6 +496,7 @@ margin: 10px auto;
     background: #484872;
     text-align: center;
 }
+
 .footer p {
     color: whitesmoke;
     margin: 20px auto;
@@ -498,12 +511,12 @@ margin: 10px auto;
         padding: 0;
         background-color: transparent;
     }
-    
-    .darkmode .navbar{
+
+    .darkmode .navbar {
         background-color: transparent;
-         color: white;
-     }
- 
+        color: white;
+    }
+
     .logo {
         position: absolute;
         top: 5px;
@@ -538,9 +551,9 @@ margin: 10px auto;
         font-weight: bold;
     }
 
-    .navbar .nav-links ul li a:hover{
+    .navbar .nav-links ul li a:hover {
         color: #fc036b;
-      }
+    }
 
     .navbar .nav-links ul li ul a:hover {
         color: #03FC18;
@@ -582,7 +595,7 @@ margin: 10px auto;
         transition: .5s;
         flex-direction: column;
     }
-    
+
     header {
         width: 100%;
         height: 50vh;
@@ -591,9 +604,9 @@ margin: 10px auto;
         background-size: 100% 600px;
         background-repeat: no-repeat;
         margin-top: 0px;
-        }
+    }
 
-       .line3 {
+    .line3 {
         display: inline-block;
         width: 350px;
         height: 4px;
@@ -624,6 +637,7 @@ margin: 10px auto;
         border-color: #f0eff4;
         color: white;
     }
+
     .active {
         color: white;
         text-decoration: none;
@@ -631,8 +645,8 @@ margin: 10px auto;
         height: 5px;
     }
 
-     /*header*/
-    .header-content{
+    /*header*/
+    .header-content {
         margin-bottom: 120px;
     }
 
@@ -652,14 +666,22 @@ margin: 10px auto;
         margin-bottom: 10px;
     }
 
-    .info{
-        border: none;
-    }
-    .info table,th,td{
+    .info {
         border: none;
     }
 
-        .line4 {
+    .info table,
+    th,
+    td {
+        border: none;
+    }
+
+    .info table tr .sinop {
+        text-align: center;
+        display: revert;
+    }
+
+    .line4 {
         justify-content: center;
         display: inline-block;
         width: 350px;
