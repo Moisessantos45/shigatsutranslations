@@ -444,6 +444,7 @@ li .fac:hover {
     display: flex;
     flex-direction: column;
     margin: 10px;
+    width: 312px;
 }
 
 .volumes figure .vol {
@@ -459,6 +460,7 @@ li .fac:hover {
     width: 300px;
     border-radius: 10px;
     box-shadow: 1px 5px 3px 2px #dfeffe;
+    align-self: center;
 }
 
 .volumes figure a {
