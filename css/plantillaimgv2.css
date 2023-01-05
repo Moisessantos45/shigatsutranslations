@@ -49,6 +49,10 @@ body.darkmode {
     font-size: 18px;
 }
 
+.darkmode .navbar {
+    background-color: rgb(20, 34, 75);
+}
+
 .navbar:hover {
     transform: translateY(5px);
     transition: .5s;
@@ -63,7 +67,7 @@ body.darkmode {
     margin: 0 20px;
 }
 
-.nav-links li:hover {
+.nav-links li:hover{
     transform: scale(1.1);
     transition: .7s;
 }
@@ -168,10 +172,6 @@ body.darkmode {
     flex-direction: column;
 }
 
-.darkmode .navbar {
-    background-color: rgb(20, 34, 75);
-}
-
 .navbar .nav-links li button {
     border-radius: 20px;
     width: 90px;
@@ -196,33 +196,36 @@ body.darkmode {
 
 header {
     width: 100%;
-    height: 70vh;
-    background-image: url('/Classmate/1.jpg');
-    background-position: center;
-    background-size: 100% 500px;
-    background-repeat: no-repeat;
+    height: 50vh;
+    background-color: ghostwhite;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     margin-top: 80px;
 }
 
+.darkmode header {
+    background-color: rgb(31, 31, 43);
+}
+
 .header-content {
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     color: whitesmoke;
     text-align: center;
     -webkit-text-stroke: 1px blue;
+    width: 85%;
 }
 
 .header-content h2 {
     font-size: 35px;
-    margin-top: 50px;
-    padding: 10px 50px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    padding: 10px 10px;
+    margin-bottom: 10px;
 }
 
 .line {
-    width: 350px;
+    display: inline-block;
+    width: 99%;
     height: 4px;
     background: #fc036b;
     margin: 10px auto;
@@ -267,267 +270,118 @@ li .fac:hover {
     color: white;
 }
 
-/*secion de la parte de la preloader*/
-.preloader {
-    width: 100%;
-    height: 100%;
-    background: #000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10000;
-}
-
-.spiner {
-    width: 70px;
-    height: 70px;
-    border-top: 5px solid blue;
-    border-right: 5px solid transparent;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    z-index: 100000;
-}
-
-.spiner>div {
-    animation: spin 1s linear infinite;
-    box-sizing: border-box;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-}
-
-@keyframes spin {
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.minfo {
-    width: 95%;
-    height: auto;
-    margin: 50px auto;
+section {
+    width: 80%;
+    margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
     gap: 0;
     justify-content: space-evenly;
-    text-align: center;
+    line-height: 2;
 }
 
-.minfo div {
-    width: 95%;
-}
-
-.darkmode .title {
-    color: white;
-    width: 95%;
+section pre{
+    margin: 0px 0px 20px 0px;
     display: flex;
-    flex-direction: column;
-    align-self: center;
+    white-space: pre-line;
+    
 }
 
-.line3 {
-    display: inline-block;
-    width: 1100px;
-    height: 4px;
-    background: #fc036b;
-    margin: 10px;
-    border-radius: 5px;
-}
 
-.line2 {
-    display: inline-block;
-    width: 1100px;
-    height: 4px;
-    background: #fc036b;
-    margin: 10px;
-    border-radius: 5px;
-}
-
-.minfo figure {
-    padding: 10px;
-    height: auto;
-    width: 350px;
-    flex-direction: column;
-    display: flex;
-    margin: 5px;
-    align-self: center;
-}
-
-.minfo img {
-    position: relative;
-    display: flex;
-    margin: 10px;
-    box-shadow: 2px 5px 5px 3px #706f6f;
-    width: 90%;
-    height: 412px;
-    border-radius: 20px;
-}
-
-.darkmode .minfo img{
-    box-shadow: 2px 5px 5px 3px #dfeffe;
-}
-
-/*
-.info{
-    border: 1px solid black;
-}
-*/
-.info {
-    display: flex;
-    width: 85%;
-    margin: 30px auto;
-}
-
-.info table {
-    width: 100%;
-}
-
-.info table tr {
-    width: 100%;
-}
-
-.info table caption {
-    margin-bottom: 20px;
-}
-
-.info table tr .sinop {
-    display: flex;
-    align-self: baseline;
-}
-
-/*
-.info table,th,td{
-    border: 1px solid black;
+/* pre{
+    white-space: pre-line;
 } */
 
-.info table th {
-    width: 12%;
-    height: 40px;
-    text-align: start;
-}
-
-.info table tr td {
-    width: 85%;
-}
-
-.content-col {
+section figure{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    width: 90%;
 }
 
-.line4 {
-    justify-content: center;
-    display: inline-block;
-    width: 1100px;
-    height: 4px;
-    background: #fc036b;
+section figure img{
+    width: 600px;
     margin: 10px;
-    border-radius: 5px;
 }
 
-.line5 {
-    display: inline-block;
-    width: 1100px;
-    height: 4px;
-    background: #fc036b;
-    margin: 10px;
-    border-radius: 5px;
-}
-
-.image-col {
-    display: flex;
-    flex-wrap: wrap;
+section .naveg {
     width: 95%;
-    justify-content: center;
-}
-
-.tours .image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    width: 95%;
-    align-items: center;
-    justify-content: center;
-}
-
-.image-gallery img {
-    max-width: 300px;
-    margin: 10px;
-}
-
-.content-col h1 {
-    text-align: center;
-    font-size: 50px;
-    color: #484872;
-}
-
-.darkmode h1 {
-    color: white;
-}
-
-/*volumenes*/
-.volumes {
+    height: auto;
+    margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
     gap: 0;
-    width: 95%;
-    margin: 40px auto;
+    justify-content: center;
+}
+
+section .naveg a {
+    color: white;
+}
+
+.naveg img {
+    position: relative;
+    width: 10px;
+    margin: 5px;
+
+}
+
+.naveg .previuos {
+    display: flex;
+    justify-content: space-evenly;
+    outline: 1px solid orange;
+    background-color: #03FC18;
+    width: 110px;
+    height: 30px;
+   margin: 5px;
+    border-radius: 10px;
+}
+
+.naveg .previuos a {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: center;
+    margin: 10px;
+}
+
+.naveg .home {
+    display: flex;
+    outline: 1px solid orange;
+    background-color: #03FC18;
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 10px;
     justify-content: space-evenly;
 }
 
-.volumes div {
+.naveg .home a {
     display: flex;
-    width: 95%;
-    text-align: center;
-    flex-direction: column;
-}
-
-.volumes figure {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    width: 300px;
-}
-
-.volumes figure .vol {
-    width: 100%;
-    display: flex;
-    text-align: center;
     justify-content: center;
-    flex-direction: column;
-    margin-top: 10px;
+    align-items: center;
+    align-self: center;
 }
 
-.volumes figure img {
-    width: 95%;
-    align-self: center;
+.naveg .home img {
+    width: 20px;
+    height: 20px;
+}
+
+.naveg .next {
+    display: flex;
+    outline: 1px solid orange;
+    background-color: #03FC18;
+    width: 100px;
+    height: 30px;
+    margin: 5px;
     border-radius: 10px;
-    box-shadow: 1px 5px 3px 2px #dfeffe;
+    justify-content: center;
 }
 
-.volumes figure a {
-    width: auto;
-    padding: 10px;
-    margin-top: 10px;
-    text-decoration: none;
-    color: white;
-    background-color: #fc036b;
-    border-radius: 20px;
-    transition: all 400ms ease;
-    margin-bottom: 5px;
-    cursor: pointer;
+.naveg .next a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     align-self: center;
-}
-
-#disqus_thread {
-    width: 95%;
-    margin: 10px auto;
 }
 
 .footer {
@@ -556,7 +410,6 @@ li .fac:hover {
 
     .darkmode .navbar {
         background-color: transparent;
-        color: white;
     }
 
     .logo {
@@ -568,7 +421,7 @@ li .fac:hover {
     .nav-links {
         flex-direction: column;
         width: 100%;
-        height: 45vh;
+        height: 40vh;
         justify-content: center;
         background-color: rgba(11, 19, 43, 0.7);
         margin-top: -900px;
@@ -582,7 +435,7 @@ li .fac:hover {
     }
 
     .nav-links li {
-        margin: 20px auto;
+        margin: 15px auto;
     }
 
     /*menu despleglable*/
@@ -647,26 +500,14 @@ li .fac:hover {
 
     header {
         width: 100%;
-        height: 50vh;
-        background-image: url('/Classmate/1.jpg');
-        background-position: center;
-        background-size: 100% 500px;
-        background-repeat: no-repeat;
-        margin-top: 0px;
+        height: 35vh;
+        background-color: ghostwhite;
+        margin-top: 20PX;
     }
 
-    .line3 {
+    .line {
         display: inline-block;
-        width: 250px;
-        height: 4px;
-        background: #fc036b;
-        margin: 5px;
-        border-radius: 5px;
-    }
-
-    .line2 {
-        display: inline-block;
-        width: 250px;
+        width: 370px;
         height: 4px;
         background: #fc036b;
         margin: 5px;
@@ -679,7 +520,7 @@ li .fac:hover {
         border-color: #17ec29;
         border-style: solid;
         cursor: pointer;
-        padding: 10px 20px;
+        padding: 5px 10px;
     }
 
     li .fac:hover {
@@ -688,76 +529,37 @@ li .fac:hover {
     }
 
     /*header*/
-    .header-content {
-        margin-bottom: 120px;
-        -webkit-text-stroke: 1px #f54768;
-    }
 
     .header-content h2 {
         font-size: 20px;
-        margin-top: 25px;
+        margin-top: 10px;
         padding: 5px 25px;
         margin-bottom: 10px;
     }
 
-    .line {
-        width: 350px;
-        height: 4px;
-        background: #fc036b;
-        margin: 10px auto;
-        border-radius: 5px;
-        margin-bottom: 10px;
+    section p{
+        font-size: 15px;
     }
 
-    .info {
-        border: none;
-    }
-
-    .info table,
-    th,
-    td {
-        border: none;
-    }
-
-    .info table tr .sinop {
-        text-align: center;
-        display: revert;
-    }
-
-    .line4 {
-        justify-content: center;
-        display: inline-block;
-        width: 350px;
-        height: 4px;
-        background: #fc036b;
+    section figure img{
+        width: 300px;
         margin: 10px;
-        border-radius: 5px;
+    }
+  
+    .naveg .previuos {
+        font-size: 14px;
+        width: 90px;
+        height: 30px;
     }
 
-    .line5 {
-        display: inline-block;
-        width: 350px;
-        height: 4px;
-        background: #fc036b;
-        margin: 10px;
-        border-radius: 5px;
+    .naveg .home {
+        width: 90px;
+        height: 30px;
     }
 
-    .tours .content-col h1 {
-        font-size: 20px;
-    }
-
-    .tours .col {
-        width: 100%;
-    }
-
-    .image-gallery {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .image-gallery img {
-        width: 40%;
+    .naveg .next {
+        width: 90px;
+        height: 30px;
     }
 
     .footer {

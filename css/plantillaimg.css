@@ -284,6 +284,11 @@ section p{
     margin: 0px 0px 20px 0px;
 }
 
+
+/* pre{
+    white-space: pre-line;
+} */
+
 section figure{
     display: flex;
     justify-content: center;

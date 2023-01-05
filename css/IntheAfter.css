@@ -197,7 +197,7 @@ body.darkmode {
 header {
     width: 100%;
     height: 70vh;
-    background-image: url('/IntheAfter/banner.jpg');
+    background-image: url('/IntheAfter/banner.png');
     background-position: center;
     background-size: 100% 500px;
     background-repeat: no-repeat;
@@ -501,6 +501,7 @@ figure .web {
     display: flex;
     flex-direction: column;
     margin: 10px;
+    width: 312px;
 }
 
 .volumes figure img {
@@ -657,7 +658,7 @@ figure a {
     header {
         width: 100%;
         height: 50vh;
-        background-image: url('/IntheAfter/banner.jpg');
+        background-image: url('/IntheAfter/banner.png');
         background-position: center;
         background-size: 100% 600px;
         background-repeat: no-repeat;
