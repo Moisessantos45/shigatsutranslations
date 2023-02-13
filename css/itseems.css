@@ -5,6 +5,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .active {
     color: white;
     text-decoration: none;
@@ -455,7 +459,7 @@ details div table {
 
 details div table tr {
     display: flex;
-    margin: 10px;
+    margin: 13px;
     transition: all 0.4s;
 }
 
@@ -750,7 +754,7 @@ details[open] summary::before {
 
     details div table tr {
         display: flex;
-        margin: 10px;
+        margin: 13px;
         flex-wrap: wrap;
         transition: all 0.4s;
     }
