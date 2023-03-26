@@ -5,6 +5,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .active {
     color: white;
     text-decoration: none;
@@ -389,6 +393,11 @@ figure .web {
 
 .info table tr td {
     width: 85%;
+}
+
+td pre{
+    word-wrap: break-word;
+    white-space: pre-line;
 }
 
 .content-col {
