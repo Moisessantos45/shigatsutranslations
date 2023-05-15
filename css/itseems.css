@@ -433,7 +433,7 @@ details {
     margin: 10px auto;
     border-radius: 10px;
     padding: 5px;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: all 0.4s;
 }
 

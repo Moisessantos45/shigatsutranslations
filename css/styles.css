@@ -177,10 +177,12 @@ body.darkmode {
     cursor: pointer;
     background-color: black;
     color: white;
+    border: none;
 }
 
 .navbar .nav-links li button::after {
     content: "Modo Oscuro";
+    border: none;
 }
 
 .darkmode .nav-links li button {
@@ -190,6 +192,7 @@ body.darkmode {
 
 .darkmode .nav-links li button::after {
     content: "Modo Claro";
+    border: none;
 }
 
 header {
@@ -434,10 +437,12 @@ figure div h4 {
     /* text-shadow: 2px 2px 10px blue; */
 }
 
-figure a {
-    width: 60px;
-    display: inline-block;
-    padding: 10px;
+.link-card{
+    width: 120px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 10px;
     text-decoration: none;
     color: white;
@@ -448,7 +453,7 @@ figure a {
     cursor: pointer;
 }
 
-figure a:hover {
+.link-card:hover {
     transform: translateY(5px);
     transition: .5s;
     background-color: #03FC18;
