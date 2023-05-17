@@ -65,77 +65,56 @@ window.addEventListener("load",()=>{
   preloader.style.display="none";
 } )
 
+let link = document.querySelectorAll(".volumes a")
+console.log(link)
+link.forEach(lin => {
+    if (lin.href === "#" || lin.href.endsWith("#")) {
+        lin.addEventListener("click", evt => {
+            evt.preventDefault()
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'Links no disponible',
+                showConfirmButton: false,
+                timer: 3500,
+                width: '20em'
+            });
+        })
+    } else {
+        lin.setAttribute("target", "_blank")
+    }
+})
 
-// Obtener el botón por su ID
-let miBoton = document.querySelector(".next a");
-console.log(miBoton)
-// let url="www.google.com"
-// Agregar un event listener para el evento "click" del botón
-miBoton.addEventListener("click", function(event) {
-  // Obtener el valor del atributo "href" del botón
-  let href = miBoton.getAttribute("href");
-  console.log(href)
-  // Verificar si el valor de "href" contiene un signo de gato (#)
-  if (href.includes("#")) {
-    event.preventDefault()
-      // href=miBoton.setAttribute("href",url)
-    // alert("no hay mas capitulos")
-    // Mostrar una notificación utilizando SweetAlert2
-    Swal.fire({
-      position: 'top-end',
-      icon: 'error',
-      title: 'No hay mas capitulos aun',
-      showConfirmButton: false,
-      timer: 5500,
-      width: '22em'
-    });
-    // Prevenir que el botón realice la acción por defecto de redireccionar a una página
-    event.preventDefault();
-  }
-  // Verificar si el valor de "href" es una URL válida
-  else if (isValidUrl(href)) {  // Permitir que el botón redirija a la URL
-    return true;
-  }
-  // Si no se cumple ninguna de las condiciones anteriores, mostrar una notificación de error
-  else {
-    Swal.fire({
-      position: 'top-end',
-      icon: 'error',
-      title: 'Esta novela no esta disponible aun',
-      showConfirmButton: false,
-      timer:1500,
-      width: '22em'
-    });
-    // Prevenir que el botón realice la acción por defecto de redireccionar a una página
-    event.preventDefault();
-  }
-});
-// Función para verificar si una cadena es una URL válida
-function isValidUrl(string) {
-  try {
-    new URL(string);
-    return true;
-  } catch (_) {
-    return false;  
-  }
-}
 
 //mostra disqus
  function mostrar(){
   document.getElementById('disqus_thread').style.display='flex'
 }
 
+const elementos = document.querySelectorAll('.pre');
 
-// const currentChapter = parseInt(window.location.pathname.match(/Capi(\d+)_itsems\.html/)[1]);
-  
-//   // Calcular el número de capítulo siguiente
-//   const nextChapter = currentChapter + 1;
-  
-//   // Actualizar el enlace Next con la URL del siguiente capítulo
-//   const nextLink = document.getElementById('next-link');
-//   nextLink.setAttribute('href', `Capi${nextChapter}_itsems.html`);
+elementos.forEach(elemento => {
+  const texto = elemento.textContent;
+  const caracteres = texto.split('');
 
+  let nuevoContenido = '';
+  let i = 0;
 
+  while (i < caracteres.length) {
+    if (caracteres[i] === '☆') {
+      nuevoContenido += `<span class="centrarEstrella">${caracteres[i]}</span>`;
+    } else if (caracteres[i] === '$' && caracteres[i + 1] === '$') {
+      nuevoContenido += `<span class="centrarEstrella">${caracteres[i] + caracteres[i + 1]}</span>`;
+      i++;
+    } else {
+      nuevoContenido += caracteres[i];
+    }
+
+    i++;
+  }
+
+  elemento.innerHTML = nuevoContenido;
+});
 
 
 // p.innerHTML = `Copyright © ${anio} Shigatsu Translation`;
