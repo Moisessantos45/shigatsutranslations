@@ -287,9 +287,14 @@ section {
 section pre{
     margin: 0px 0px 20px 0px;
     display: flex;
-    white-space: pre-line;    
+    white-space: pre-line; 
+    flex-direction: column;   
 }
 
+.centrarEstrella {
+    display: flex;
+    justify-content: center;
+}
 
 /* pre{
     white-space: pre-line;
@@ -301,7 +306,7 @@ section figure{
     width: 90%;
 }
 
-section figure img{
+figure img{
     width: 600px;
     margin: 10px;
 }
