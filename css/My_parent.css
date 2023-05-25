@@ -5,7 +5,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -29,12 +29,12 @@ html {
     overflow-x: hidden;
 }
 
-body{
+body {
     transition: all 0.4s;
- }
+}
 
-body.darkmode{
-    background-color: rgb(32, 32,44);
+body.darkmode {
+    background-color: rgb(32, 32, 44);
     color: white;
 }
 
@@ -43,16 +43,15 @@ body.darkmode{
     border-radius: 40px;
     background-color: rgb(11, 19, 43);
     position: absolute;
-    top: 0;
-    left: 0;
     display: flex;
     width: 100%;
     justify-content: space-between;
     color: whitesmoke;
     font-size: 18px;
+    /* overflow: hidden; */
 }
 
-.darkmode .navbar{
+.darkmode .navbar {
     background-color: rgb(20, 34, 75);
 }
 
@@ -70,7 +69,7 @@ body.darkmode{
     margin: 0 20px;
 }
 
-.nav-links li:hover{
+.nav-links li:hover {
     transform: scale(1.1);
     transition: .7s;
 }
@@ -114,8 +113,8 @@ body.darkmode{
     font-weight: bold;
 }
 
-.navbar .nav-links ul li a:hover{
-  color: #fc036b;
+.navbar .nav-links ul li a:hover {
+    color: #fc036b;
 }
 
 .navbar .nav-links ul li ul a:hover {
@@ -158,12 +157,12 @@ body.darkmode{
     text-transform: uppercase;
 }
 
-.navbar .nav-links .active a{
+.navbar .nav-links .active a {
     font-weight: bold;
-    text-transform: uppercase;    
+    text-transform: uppercase;
 }
 
-.navbar .nav-links li a{
+.navbar .nav-links li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -180,22 +179,22 @@ body.darkmode{
     width: 90px;
     height: 30px;
     cursor: pointer;
-    background-color:black;
+    background-color: black;
     color: white;
 }
 
-.navbar .nav-links  li button::after{
+.navbar .nav-links li button::after {
     content: "Modo Oscuro";
-    }
-       
-    .darkmode .nav-links li button{
-        color: black;
-        background-color: white;
-    }
-    
-    .darkmode .nav-links li button::after{
-        content: "Modo Claro";
-    }
+}
+
+.darkmode .nav-links li button {
+    color: black;
+    background-color: white;
+}
+
+.darkmode .nav-links li button::after {
+    content: "Modo Claro";
+}
 
 header {
     width: 100%;
@@ -256,7 +255,7 @@ header {
 }
 
 li .fac {
-    color:aqua;
+    color: aqua;
     font-size: 20px;
     border-radius: 10px;
     border-color: #17ec29;
@@ -273,16 +272,21 @@ li .fac:hover {
 .minfo {
     width: 95%;
     height: auto;
-    margin: 50px auto;
+    margin: 10px auto;
     display: flex;
     flex-wrap: wrap;
     gap: 0;
     justify-content: space-evenly;
     text-align: center;
+    flex-direction: column;
 }
 
-.minfo div {
+.minfo_title {
     width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .darkmode .title {
@@ -294,8 +298,8 @@ li .fac:hover {
 }
 
 .line3 {
-    display: inline-block;
-    width: 1100px;
+    display: flex;
+    width: 95%;
     height: 4px;
     background: #fc036b;
     margin: 10px;
@@ -303,8 +307,8 @@ li .fac:hover {
 }
 
 .line2 {
-    display: inline-block;
-    width: 1100px;
+    display: flex;
+    width: 95%;
     height: 4px;
     background: #fc036b;
     margin: 10px;
@@ -342,49 +346,61 @@ li .fac:hover {
     margin: 30px auto;
 }
 
-.info table{
+.info table {
     width: 100%;
     /* vertical-align: auto; */
 }
 
-.info table tr{
+.info table tr {
     width: 100%;
 }
 
-.info table .prueba2{
-   display: flex;
-   width: 100%;
+.info table .prueba2 {
+    display: flex;
+    width: 100%;
 }
 
-.info table tr .sinop{
+.info table tr .sinop {
     display: flex;
-    align-self:baseline;
+    align-self: baseline;
 }
+
 /*
 .info table,th,td{
     border: 1px solid black;
 } */
 
-.info table th{
-   width: 13%;
-   height: 40px;
-   text-align:start;
+.info table th {
+    width: 13%;
+    height: 40px;
+    text-align: start;
 }
 
-.info table tr td{
+.info table tr td {
     width: 85%;
+}
+
+.tours {
+    display: flex;
+    margin: 30px auto;
+    width: 95%;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .content-col {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    width: 95%;
+    height: 120px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .line4 {
     justify-content: center;
-    display: inline-block;
-    width: 1100px;
+    display: flex;
+    width: 95%;
     height: 4px;
     background: #fc036b;
     margin: 10px;
@@ -392,8 +408,8 @@ li .fac:hover {
 }
 
 .line5 {
-    display: inline-block;
-    width: 1100px;
+    display: flex;
+    width: 95%;
     height: 4px;
     background: #fc036b;
     margin: 10px;
@@ -404,18 +420,10 @@ li .fac:hover {
     display: flex;
     flex-wrap: wrap;
     width: 95%;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-.tours .image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    width: 95%;
-    align-items: center;
-    justify-content: center;
-}
-
-.image-gallery img {
+.image-col img {
     max-width: 300px;
     margin: 10px;
 }
@@ -426,13 +434,10 @@ li .fac:hover {
     color: #484872;
 }
 
-.darkmode h1{
+.darkmode h1 {
     color: white;
 }
 
-.content-col .line {
-    margin-left: -1px;
-}
 /*volumenes*/
 .volumes {
     display: flex;
@@ -443,11 +448,12 @@ li .fac:hover {
     justify-content: space-evenly;
 }
 
-.volumes div {
+.volumen_title {
     display: flex;
     width: 95%;
     text-align: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .volumes figure {
@@ -457,13 +463,14 @@ li .fac:hover {
     width: 312px;
 }
 
-.volumes figure .vol {
-    width: 100%;
+.vol {
+    width: 95%;
+    height: 230px;
     display: flex;
     text-align: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
-    margin-top: 10px;
+    margin: 10px;
 }
 
 .volumes figure img {
@@ -474,27 +481,28 @@ li .fac:hover {
 }
 
 .volumes figure a {
-    width: auto;
-    padding: 10px;
-    margin-top: 10px;
+    width: 70%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: white;
     background-color: #fc036b;
     border-radius: 20px;
     transition: all 400ms ease;
-    margin-bottom: 5px;
     cursor: pointer;
     align-self: center;
 }
 
-.volumes figure a:active{
+.volumes figure a:active {
     background-color: lime;
 }
 
-#disqus_thread{
+#disqus_thread {
     width: 95%;
     margin: 10px auto;
-    }
+}
 
 .footer {
     width: 100%;
@@ -504,6 +512,7 @@ li .fac:hover {
     background: #484872;
     text-align: center;
 }
+
 .footer p {
     color: whitesmoke;
     margin: 20px auto;
@@ -517,12 +526,13 @@ li .fac:hover {
     .navbar {
         padding: 0;
         background-color: transparent;
+        overflow: visible;
     }
 
     .darkmode .navbar {
         background-color: transparent;
     }
- 
+
     .logo {
         position: absolute;
         top: 5px;
@@ -557,9 +567,9 @@ li .fac:hover {
         font-weight: bold;
     }
 
-    .navbar .nav-links ul li a:hover{
+    .navbar .nav-links ul li a:hover {
         color: #fc036b;
-      }
+    }
 
     .navbar .nav-links ul li ul a:hover {
         color: #03FC18;
@@ -613,28 +623,11 @@ li .fac:hover {
         width: 100%;
         height: 50vh;
         background-image: url('/img/my_panter_back.jpg');
-        background-position: center;
+        /* filter: brightness(50%); */
+        background-position: center center;
         background-size: 100% 600px;
         background-repeat: no-repeat;
         margin-top: 0px;
-    }
-    
-      .line3 {
-        display: inline-block;
-        width: 350px;
-        height: 4px;
-        background: #fc036b;
-        margin: 5px;
-        border-radius: 5px;
-    }
-
-    .line2 {
-        display: inline-block;
-        width: 350px;
-        height: 4px;
-        background: #fc036b;
-        margin: 5px;
-        border-radius: 5px;
     }
 
     li .fac {
@@ -650,11 +643,12 @@ li .fac:hover {
         border-color: #f0eff4;
         color: white;
     }
-     /*header*/
-.header-content{
-    margin-bottom: 120px;
-    -webkit-text-stroke: 1px blue;
-}     
+
+    /*header*/
+    .header-content {
+        margin-bottom: 120px;
+        -webkit-text-stroke: 1px blue;
+    }
 
     .header-content h2 {
         font-size: 20px;
@@ -673,52 +667,23 @@ li .fac:hover {
         margin-bottom: 10px;
     }
 
-    .info{
-        border: none;
-    }
-    .info table,th,td{
+    .info {
         border: none;
     }
 
-    .info table tr .sinop{
+    .info table,
+    th,
+    td {
+        border: none;
+    }
+
+    .info table tr .sinop {
         text-align: center;
-        display:revert;
+        display: revert;
     }
 
-     .line4 {
-        justify-content: center;
-        display: inline-block;
-        width: 350px;
-        height: 4px;
-        background: #fc036b;
-        margin: 10px;
-        border-radius: 5px;
-    }
-
-    .line5 {
-        display: inline-block;
-        width: 350px;
-        height: 4px;
-        background: #fc036b;
-        margin: 10px;
-        border-radius: 5px;
-    }
-
-    .tours .content-col h1 {
+    .content-col h1 {
         font-size: 20px;
-    }
-
-    .tours .col {
-        width: 100%;
-    }
-
-    .image-gallery {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .image-gallery img {
-        width: 40%;
     }
 
     .footer {
